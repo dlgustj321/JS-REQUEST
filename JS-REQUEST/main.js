@@ -11,15 +11,21 @@ const data = await createColorSurveys(surveyData);
 console.log(data);
 */
 
-
+/*
 const data = await getColorSurvey(10);
 console.log(data);
-
-
-/* 쿼리에 따라 값을 변경
-const data = await getColorSurveys({ offset: 20, limit: 20 });
-console.log(data);
 */
+
+/* 쿼리에 따라 값을 변경*/
+try {
+const data = await getColorSurveys({mbti : 'ENFJ' });
+console.log(data);
+} catch(error) {
+  console.log('ERROR!');
+  console.log(error.message);
+} finally {
+  console.log('Finished!');
+}
 
 /*
 다양한 GET 리퀘스트 보내기(데이터 불러오기)

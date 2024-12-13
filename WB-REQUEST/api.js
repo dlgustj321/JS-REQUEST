@@ -35,7 +35,7 @@ export async function getColorSurvey(id) {
 }
 
 // POST 리퀘스트(원하는 데이터를 전송)
-export async function createColorSurveys(surveyData) {
+export async function createColorSurvey(surveyData) {
   const res = await fetch("https://learn.codeit.kr/api/color-surveys", {
     method: "POST",
     body: JSON.stringify(surveyData), // 문자열 데이터
